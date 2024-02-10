@@ -4,7 +4,7 @@ import { teamPng } from "../../public";
 
 const Contact = () => {
   return (
-    <div className="border-2 w-full flex justify-evenly">
+    <div className=" w-full flex justify-evenly">
       <div className="max-w-lg p-24 hidden lg:flex ">
         <Image src={teamPng} />
       </div>

@@ -15,7 +15,7 @@ const Hero = () => {
           <Button title={"Empezar Ahora"} href={"/"} bg={"bg-white"} />
         </div>
       </div>
-      <div className="text-white text-xl w-full hidden lg:flex">
+      <div className="hidden text-white text-xl w-full">
         This is another piece of div in the main landing 
       </div>
     </div>

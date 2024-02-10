@@ -4,6 +4,7 @@ import logoPng from './logo.png'
 import rocketPng from './rocket.png'
 import targetPng from './target.png'
 import teamPng from './team.png'
+import computerJpg from './computer.jpg'
 //import vidVideo from './needAVid.mp4'
 
 
@@ -16,4 +17,5 @@ export {
     rocketPng,
     targetPng,
     teamPng,
+    computerJpg
 }
