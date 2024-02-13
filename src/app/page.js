@@ -8,10 +8,10 @@ import Test from "@/components/Test";
 export default function Home() {
   return (
     <>
-      <section className="h-screen p-4">
+      <section className="h-fit lg:h-[650px] p-4">
         <Hero />
       </section>
-      <section className="h-fit bg-gray-700/90 p-4 pb-20">
+      <section className="h-fit bg-slate-950 p-4 pb-20">
         <About />
       </section>
       <section >

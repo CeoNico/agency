@@ -2,9 +2,9 @@ import Button from "./Button";
 
 const Hero = () => {
   return (
-    <div className="h-96 lg:h-full flex justify-evenly">
+    <div className="h-[500px] lg:h-full flex justify-evenly">
       <div className="bg-hero bg-cover bg-center w-full items-center flex justify-center">
-        <div className="w-[80%] h-[80%] bg-white/10 rounded-xl items-center justify-center">
+        <div className="w-[80%] h-[70%] lg:w-[50%] bg-white/20 rounded-xl items-center justify-center -mt-20">
           <h1 className="p-2 text-white text-2xl text-center font-bold">
             Listo Para Llevar Tu Negocio Al Proximo Nivel?
           </h1>
@@ -16,9 +16,6 @@ const Hero = () => {
             <Button title={"Empezar Ahora"} href={"/"} bg={"bg-white"} />
           </div>
         </div>
-      </div>
-      <div className="hidden text-white text-xl w-full">
-        This is another piece of div in the main landing
       </div>
     </div>
   );

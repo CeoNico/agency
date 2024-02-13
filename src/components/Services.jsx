@@ -9,11 +9,11 @@ const Test = () => {
     <div className="grid grid-cols-1 lg:grid-cols-4 ">
       {services.map((service) => (
           <div key={service.title} className="p-4 items-center">
-            <div className="h-96 ">
+            <div className=" ">
               <h1 className="text-center font-bold text-white text-xl">
                 {service.title}
               </h1>
-              <p className="text-center text-balance p-2 text-white text-lg">
+              <p className="text-center text-balance p-2 text-white text-lg lg:h-96">
                 {service.subtitle}
               </p>
             </div>
