@@ -3,31 +3,29 @@ import { services } from "@/const";
 import FadeIn from "@/const/FadeIn";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { DM_Serif_Display } from "next/font/google";
+import ServiceCard from "./ServiceCard";
+
+const serif = DM_Serif_Display({
+  fallback: ["sans-serif"],
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const Test = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-4 ">
+    <section className={`${serif.className} grid grid-cols-1 lg:grid-cols-4`}>
       {services.map((service) => (
-          <div key={service.title} className="p-4 items-center">
-            <div className=" ">
-              <h1 className="text-center font-bold text-white text-xl">
-                {service.title}
-              </h1>
-              <p className="text-center text-balance p-2 text-white text-lg lg:h-96">
-                {service.subtitle}
-              </p>
-            </div>
-            <div className="flex items-center justify-center">
-              <Image
-                className="rounded-full "
-                height={200}
-                width={200}
-                src={service.img}
-              />
-            </div>
-          </div>
+        <div className="flex p-2 " key={service.title}>
+          <ServiceCard
+            imgUrl={service.img}
+            title={service.title}
+            s
+            subtitle={service.subtitle}
+          />
+        </div>
       ))}
-    </div>
+    </section>
   );
 };
 

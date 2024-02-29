@@ -4,7 +4,7 @@ export const services = [
   {
     title: "Desarollo Web",
     subtitle:
-      "Offrecemos un servicio especializado en desarollar un sitio web SIN wordpress, tiendanube o NINGUN otro terciario. Nuestro trabajo es diseñado por nuestro cliente o nostros si decide el cliente. Offrecemos sitios desde un lindo y simple landing page hasta un sitio completo de e-commerce similar a mercadolibre y otros! ",
+      "Offrecemos un servicio especializado en desarollar un sitio web SIN wordpress, tiendanube o NINGUN otro terciario. Offrecemos sitios desde un lindo y simple landing page hasta un sitio fullstack de e-commerce ",
 
     img: computerPng,
   },
