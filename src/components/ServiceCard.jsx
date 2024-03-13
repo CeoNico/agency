@@ -1,25 +1,45 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
+import { useRef } from "react";
 
-const ServiceCard = ({ title, subtitle, imgUrl, bgColor }) => {
+const ServiceCard = ({ title, subtitle, imgUrl }) => {
+  const ref = useRef(null);
 
-  const variants = {
-    initial: {
-      x:-1000,
-    },
-    animate: {
-      x: 0,
-    }
-  }
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "0.9 0.9"],
+  });
+
   return (
-    <motion.div variants={variants} initial="initial" animate="animate" transition={{duration: 1.5}}  className="p-4 grid gap-4">
-      <h1 className="text-2xl lg:text-3xl text-center text-white">{title}</h1>
-      <p className="text-white">{subtitle}</p>
-      <div className=" flex items-center justify-center">
-        <Image className="rounded-full" src={imgUrl} height={200} width={200} />
-      </div>
-    </motion.div>
+    <>
+      <AnimatePresence>
+        <motion.div
+          ref={ref}
+          style={{
+            scale: scrollYProgress,
+            opacity: scrollYProgress,
+
+          }}
+          className=""
+        >
+          <div className="p-4 grid gap-4">
+            <motion.h1 className="text-2xl lg:text-3xl text-center text-white">
+              {title}
+            </motion.h1>
+            <motion.p className="text-white">{subtitle}</motion.p>
+            <div className=" flex items-center justify-center">
+              <Image
+                className="rounded-3xl p-4"
+                src={imgUrl}
+                height={400}
+                width={400}
+              />
+            </div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
+    </>
   );
 };
 
